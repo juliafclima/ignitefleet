@@ -4,22 +4,10 @@ module.exports = function (api) {
     presets: ["babel-preset-expo"],
     plugins: [
       [
-        "module-resolver",
+        "module:react-native-dotenv",
         {
-          root: ["./src"],
-          alias: {
-            "@dtos": "./src/dtos",
-            "@assets": "./src/assets",
-            "@components": "./src/components",
-            "@screens": "./src/screens",
-            "@storage": "./src/storage",
-            "@utils": "./src/utils",
-            "@services": "./src/services",
-            "@servers": "./src/servers",
-            "@hooks": "./src/hooks",
-            "@contexts": "./src/contexts",
-            "@routes": "./src/routes",
-          },
+          moduleName: "@env",
+          allowUndefined: false,
         },
       ],
     ],
